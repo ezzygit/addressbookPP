@@ -1,39 +1,42 @@
+* {
+  background-color: blue;
+  margin:5%;
+  
+  box-sizing: border-box;
+}
 .App {
   display:flex;
-  justify-content: center;
   align-items: center;
-  width:100%;
-  margin-top: 100px;
-  height: 20vh;
   background-color: black;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
-.input {
-  display:flex;
-  justify-content: center;
+.App-container {
+  background-color: black;
   align-items: center;
-  width:100%;
-  margin-top: 100px;
-  height: 10%;
-}
-
- .number {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width:100%;
-  margin-top: 100px;
-  height: 10%;
-}
-.button {
-  display: flex;
-  justify-content: space-around;
+  color: white;
+  width: 100%;
 }
 
 .title {
-  justify-content: center;
-  display: table-row;
+  background-color: black;
+  
 }
 
+.input {
+  background-color: white;
+}
 
+.button {
+  background-color: white;
+  color: black;
+}
+
+.numbers {
+  background-color: black;
+  color: white;
+}
 
