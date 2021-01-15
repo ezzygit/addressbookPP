@@ -5,39 +5,37 @@ class App extends React.Component {
 
     state = {
         input: "",
-        name: "",
-        number: "",
+        numbers: [],
     }
 
 handleInput = (event) => {
-this.setState({input:event.target.val})
+this.setState({input:event.target.value})
+};
+
+addNumbers = () => {
+    let newNumbers = [...this.state.numbers]
+    newNumbers.push(this.state.input)
+    this.setState({numbers:newNumbers,input:""})
 }
+
+
 
 render () {
     return (
-        <div className="App">
-            <div className='title'>
-            <h1>Address Book</h1>
-            <div>
-            <input className="input"></input>
-            <button className="button">Add new contact</button>
-            </div>
-            <div className="number">2</div>
-            </div>
-            
+        <div>
+           <h1>Adress book </h1>
+              <input value={this.state.input} onChange={this.handleInput}></input>
+              
+              <button value= {this.state.input} onClick={(this.addNumbers)}>add</button>
+        
+           <div className="numbers">{this.state.numbers.map((num,index)=>{
+                 return <p key={index}>{num}</p>;})}
+           </div>
+
         </div>
+            
         
-        
-
-
-
-
-
-    ) 
-}
-
-
-}
+)}}
 
 
 
